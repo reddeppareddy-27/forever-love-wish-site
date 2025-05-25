@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const AnimatedBackground: React.FC = () => {
   const images = [
-    "public/images/darling2705.jpg",
+    "/images/darling2705.jpg",
     
   ];
 

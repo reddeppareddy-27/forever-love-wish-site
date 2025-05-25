@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Countdown from './Countdown';
+
 import LoveMessage from './LoveMessage';
 import Gallery from './Gallery';
 import BirthdayWishes from './BirthdayWishes';
@@ -16,7 +17,7 @@ const HomePage: React.FC = () => {
   const name = "Darling ✨🖤";
   
   // Set your girlfriend's birthday for countdown
-  const birthday = new Date("2025-05-25"); // Year-Month-Day format
+  const birthday = new Date("2025-05-27"); // Year-Month-Day format
   
   // Check if today is birthday
   const today = new Date();
@@ -41,39 +42,39 @@ With all my heart and soul`;
   // Sample photos - replace with your actual photos
   const photos = [
     { 
-      src: "public/images/reddy.jpg", 
+      src: "/images/reddy.jpg", 
       caption: "Cute" 
     },
     { 
-      src: "public/images/janu2.jpg",
+      src: "/images/janu2.jpg",
       caption: "Decent"
     },
     { 
-      src: "public/images/janu3.jpg", 
+      src: "/images/janu3.jpg", 
       caption: "Beauty"
     },
     { 
-      src: "public/images/dar1.jpg",
+      src: "/images/dar1.jpg",
       caption: "Sunshine mixed with a little hurricane ☀️🌪️"
     },
     { 
-      src: "public/images/dar2.jpg", 
+      src: "/images/dar2.jpg", 
       caption: "Dream big, sparkle more, shine bright ✨"
     },
     { 
-      src: "public/images/dar.jpg",
+      src: "/images/dar.jpg",
       caption: "In a world full of trends, I want to remain a classic 🎨"
     },
     { 
-      src: "public/images/darling2705.jpg",
+      src: "/images/darling2705.jpg",
       caption: "Traditional"
     },
     { 
-      src: "public/images/darling .jpg", 
+      src: "/images/darling .jpg", 
       caption: "Celebrating you"
     },
     { 
-      src: "public/images/dar3.jpg",
+      src: "/images/dar3.jpg",
       caption: "My favorite smile"
     },
   ];
