@@ -16,7 +16,7 @@ const HomePage: React.FC = () => {
   const name = "Darling ✨🖤";
   
   // Set your girlfriend's birthday for countdown
-  const birthday = new Date("2025-05-27"); // Year-Month-Day format
+  const birthday = new Date("2025-05-25"); // Year-Month-Day format
   
   // Check if today is birthday
   const today = new Date();
