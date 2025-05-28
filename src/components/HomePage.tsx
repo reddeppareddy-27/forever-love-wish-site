@@ -1,7 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
-import Countdown from './Countdown';
 import LoveMessage from './LoveMessage';
 import Gallery from './Gallery';
 import BirthdayWishes from './BirthdayWishes';
@@ -157,58 +155,43 @@ With all my heart and soul`;
       <div className="relative z-10">
         <Header name={name} isBirthday={isBirthday} />
         
-        {!isBirthday && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
-          >
-            <Countdown targetDate={birthday} isBirthday={isBirthday} />
-          </motion.div>
-        )}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
+        >
+          <LoveMessage message={loveMessage} />
+        </motion.div>
         
-        {isBirthday && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
-            >
-              <LoveMessage message={loveMessage} />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
-              className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
-            >
-              <Gallery photos={photos} />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.5 }}
-              className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
-            >
-              <MemoryTimeline memories={specialMemories} />
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2 }}
-              className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
-            >
-              <BirthdayWishes />
-            </motion.div>
-            
-            <Footer />
-          </>
-        )}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
+        >
+          <Gallery photos={photos} />
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.5 }}
+          className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
+        >
+          <MemoryTimeline memories={specialMemories} />
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2 }}
+          className="backdrop-blur-sm bg-white/30 rounded-lg mx-4 md:mx-8 lg:mx-16 p-6 mb-8"
+        >
+          <BirthdayWishes />
+        </motion.div>
+        
+        <Footer />
       </div>
     </motion.div>
   );
