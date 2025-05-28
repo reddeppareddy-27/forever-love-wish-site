@@ -1,7 +1,7 @@
+
 import React, { useState, useEffect } from 'react';
 import Header from './Header';
 import Countdown from './Countdown';
-
 import LoveMessage from './LoveMessage';
 import Gallery from './Gallery';
 import BirthdayWishes from './BirthdayWishes';
@@ -168,7 +168,6 @@ With all my heart and soul`;
           </motion.div>
         )}
         
-        {/* Only show these sections when it's the actual birthday */}
         {isBirthday && (
           <>
             <motion.div
