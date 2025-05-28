@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ name, isBirthday }) => {
         <h1 className={`font-dancing text-4xl md:text-6xl lg:text-7xl text-rose-600 mb-4 text-shadow ${
           showBirthdayAnimation ? 'animate-zoomIn' : 'animate-heartbeat'
         }`}>
-          {isBirthday ? 'Happy Birthday' : 'Advance Happy Birthday'}
+          Happy Birthday
         </h1>
         
         <div className="flex items-center justify-center space-x-4 mb-6">
@@ -53,7 +53,7 @@ const Header: React.FC<HeaderProps> = ({ name, isBirthday }) => {
         </div>
         
         <p className="font-poppins text-lg md:text-xl text-rose-700 max-w-xl mx-auto">
-          {isBirthday ? 'Today is all about you, the love of my life!' : 'Looking forward to celebrating you, my love!'}
+          Today is all about you, the love of my life!
         </p>
       </div>
     </header>
